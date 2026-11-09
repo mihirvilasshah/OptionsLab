@@ -332,11 +332,11 @@ Optional Finnhub requests are made by the server route only. The key is read fro
 - Charts use `role="img"` with descriptive labels and include a visually hidden data table where appropriate.
 - Colour is supplemented by text labels (ITM/ATM, profit/loss signs, badges).
 - `prefers-reduced-motion` support in global styles.
-- Light/dark contrast tokens designed for WCAG 2.2 AA targets. Run a Lighthouse/axe audit against your deployment to confirm.
+- Light/dark contrast tokens designed for WCAG 2.2 AA targets. The deployed build was audited with axe-core (WCAG 2.0/2.1/2.2 A and AA rules) on the home, lesson, calculator, simulator, strategy, glossary and quiz pages with zero violations.
 - Per-page metadata, canonical URLs and Open Graph tags.
 - `app/sitemap.ts` covers the home page, all modules, all 28 lessons and all 16 strategy pages.
 - `app/robots.ts` allows public pages and disallows `/api/`.
-- `app/not-found.tsx`, `app/loading.tsx` and `app/error.tsx` provide recovery paths.
+- `app/not-found.tsx` and `app/error.tsx` provide recovery paths.
 
 ---
 

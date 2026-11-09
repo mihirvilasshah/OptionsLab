@@ -4,6 +4,8 @@ An interactive, visual platform for learning options trading from first principl
 
 The app is built for education. It does not place real orders, does not require an account, and never presents model output as live exchange data.
 
+**Live demo:** <https://options-lab-sepia.vercel.app>
+
 ---
 
 ## Contents
@@ -140,7 +142,7 @@ All variables are optional. Copy `.env.example` to `.env.local`.
 
 | Variable | Scope | Required | Purpose |
 | --- | --- | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Public | No | Canonical URL base for metadata, `sitemap.xml`, `robots.txt` and Open Graph. Defaults to `https://options-lab.vercel.app`. Set this to your deployed URL. |
+| `NEXT_PUBLIC_SITE_URL` | Public | No | Canonical URL base for metadata, `sitemap.xml`, `robots.txt` and Open Graph. Defaults to `https://options-lab-sepia.vercel.app`. Set this to your deployed URL. |
 | `MARKET_DATA_PROVIDER` | Server | No | `simulated` (default) or `finnhub`. |
 | `FINNHUB_API_KEY` | Server only | No | Enables delayed US stock quotes when the provider is `finnhub`. Never prefix with `NEXT_PUBLIC_`. |
 
@@ -360,6 +362,8 @@ The date-related tests also guard the local-date helper used by expiry calendars
 ---
 
 ## Deploying to Vercel
+
+The project is deployed at <https://options-lab-sepia.vercel.app>. The steps below reproduce that setup from scratch.
 
 ### Option A — Dashboard
 

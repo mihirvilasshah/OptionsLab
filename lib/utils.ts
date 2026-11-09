@@ -126,6 +126,7 @@ export function formatDate(date: string | Date, options?: Intl.DateTimeFormatOpt
           )
         : new Date(date)
       : date;
+  if (Number.isNaN(d.getTime())) return "—";
   return new Intl.DateTimeFormat("en-IN", {
     day: "2-digit",
     month: "short",

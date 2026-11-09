@@ -58,4 +58,9 @@ describe("formatDate", () => {
   it("still renders ISO timestamps", () => {
     expect(formatDate("2026-11-08T10:30:00.000Z")).toContain("2026");
   });
+
+  it("returns a dash instead of throwing for invalid dates", () => {
+    expect(formatDate("")).toBe("—");
+    expect(formatDate("not-a-date")).toBe("—");
+  });
 });

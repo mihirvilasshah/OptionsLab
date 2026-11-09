@@ -10,7 +10,7 @@ import { Footer } from "@/components/layout/footer";
 import { StoreHydrator } from "@/components/layout/store-hydrator";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://options-lab.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://options-lab-sepia.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

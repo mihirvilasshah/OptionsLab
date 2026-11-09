@@ -137,13 +137,17 @@ export function GlossaryExplorer() {
           </div>
         </div>
 
-        <div className="mt-4 flex flex-wrap gap-1 border-t border-border pt-3" aria-label="Filter by first letter">
+        <div
+          className="mt-4 flex flex-wrap gap-1 border-t border-border pt-3"
+          role="group"
+          aria-label="Filter by first letter"
+        >
           <button
             type="button"
             onClick={() => setLetter("All")}
             aria-pressed={letter === "All"}
             className={cn(
-              "rounded-md px-2 py-1 font-mono text-[10px] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+              "min-h-6 min-w-6 rounded-md px-2 py-1 font-mono text-[10px] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
               letter === "All" ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-muted hover:text-foreground",
             )}
           >
@@ -156,7 +160,7 @@ export function GlossaryExplorer() {
               onClick={() => setLetter(letter === character ? "All" : character)}
               aria-pressed={letter === character}
               className={cn(
-                "rounded-md px-1.5 py-1 font-mono text-[10px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                "min-h-6 min-w-6 rounded-md px-1.5 py-1 font-mono text-[10px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
                 letter === character
                   ? "bg-primary/10 font-semibold text-primary"
                   : "text-muted-foreground hover:bg-muted hover:text-foreground",

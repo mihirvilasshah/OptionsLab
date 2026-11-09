@@ -147,19 +147,18 @@ export function SliderField({
   hint?: string;
   className?: string;
 }) {
-  const id = React.useId();
+  const labelId = React.useId();
   const display = format ? format(value) : `${prefix ?? ""}${value.toLocaleString("en-IN")}${suffix ?? ""}`;
   return (
     <div className={cn("grid gap-2", className)}>
       <div className="flex items-center justify-between gap-2">
-        <Label htmlFor={id}>{label}</Label>
+        <Label id={labelId}>{label}</Label>
         <span className="rounded-md border border-border bg-muted/60 px-2 py-0.5 font-mono text-xs tabular text-foreground">
           {display}
         </span>
       </div>
       <Slider
-        id={id}
-        aria-label={label}
+        aria-labelledby={labelId}
         value={[value]}
         min={min}
         max={max}
